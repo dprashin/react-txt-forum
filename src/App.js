@@ -5,9 +5,12 @@ import {
   Route,
   Redirect
 } from 'react-router-dom'
+
+import AppContainer from './hoc/AppContainer'
+
 import Login from './components/Login/Login'
 import NotFound from './components/NotFound/NotFound'
-import AppContainer from './hoc/AppContainer'
+import Timeline from './Timiline/Timeline'
 
 
 function App() {
@@ -22,6 +25,7 @@ function App() {
       </AppContainer>
       <Switch>
         <Route path="/" exact component={ Login }/>
+        <Route path="/timeline" component={Timeline} />
         <Route path="/*" component={NotFound} />
       </Switch>
     </div>
