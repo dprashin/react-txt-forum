@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
-import Avatars from "../../Avatars/Avatars";
+import Avatars from "../../components/Avatars/Avatars";
 import AppContainer from "../../hoc/AppContainer";
 
 const Register = () => {

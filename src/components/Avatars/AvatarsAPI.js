@@ -1,4 +1,4 @@
-import { handleFirstResponse } from "../utils/apiUtils"
+import { handleFirstResponse } from "../../utils/apiUtils"
 
 export const AvatarsAPI = {
     getAvatars() {
