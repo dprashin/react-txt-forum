@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
+import Avatars from "../../Avatars/Avatars";
 import AppContainer from "../../hoc/AppContainer";
 
 const Register = () => {
@@ -17,7 +18,7 @@ const Register = () => {
     event.preventDefault();
     //dispatch register attempt action 
 
-    
+
     console.log("Register.onRegisterSubmit()", user);
   };
 
@@ -64,6 +65,7 @@ const Register = () => {
             onChange= { onInputChange }
           />
         </div>
+        <Avatars />
         <button className="btn btn-success btn-lg">Register</button>
       </form>
       <p className="mb-3">
