@@ -1,3 +1,5 @@
+import { handleFirstResponse } from "../utils/apiUtils"
+
 export const RegisterAPI = {
   register({ username, password, avatar }) {
     return fetch(
@@ -9,13 +11,6 @@ export const RegisterAPI = {
         },
         body: JSON.stringify({ username, password, avatar }),
       }
-    ).then(async (response) => {
-      if (!response.ok) {
-        const { error = "Unknown error occured." } = await response.json();
-        throw new Error(error);
-      }
-
-      return response.json();
-    });
-  },
+    ).then(handleFirstResponse)
+  }, 
 };
