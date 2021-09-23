@@ -15,6 +15,9 @@ const Register = () => {
 
   const onRegisterSubmit = (event) => {
     event.preventDefault();
+    //dispatch register attempt action 
+
+    
     console.log("Register.onRegisterSubmit()", user);
   };
 
