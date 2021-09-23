@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { Redirect } from "react-router";
+import { useSelector, useDispatch } from "react-redux";
+import { Redirect, Link } from "react-router-dom";
 import AppContainer from "../../hoc/AppContainer";
 import { loginAttemptAction } from "../../store/actions/loginActions";
 
@@ -10,7 +9,7 @@ const Login = () => {
 
   const { loginError, loginAttempting } = useSelector(
     (state) => state.loginReducer
-  );
+  )
   const { loggedIn } = useSelector((state) => state.sessionReducer);
 
   //create state for login
@@ -79,6 +78,11 @@ const Login = () => {
               <p className="mb-0">{loginError}</p>
             </div>
           )}
+
+          <p className="mb-3">
+            <Link to="/register">No account? Register here </Link>
+          </p>
+
         </AppContainer>
       )}
     </>
